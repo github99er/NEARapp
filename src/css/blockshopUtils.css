@@ -1,0 +1,25 @@
+.rowSpacing {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.InventoryContainer {
+  background-color: #424242;
+  margin-top: 10%;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+.InventoryListContainer {
+  background-color: #fff;
+  color: black;
+  padding: 10%;
+  width: 150%;
+}
+
+.OptionsContainer {
+  background-color: #424242;
+  margin-top: 10%;
+  border-radius: 10px;
+  padding: 3%;
+}
