@@ -18,7 +18,7 @@ const Item=(props)=> {
                                   {props.description}
                           </Card.Text>
                           <Card.Title>{props.price}</Card.Title>
-                          <Button onClick={addItem} variant="primary">Add to Cart</Button>
+                          <Button style={{backgroundImage: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)"}} onClick={addItem} variant="primary">Add to Cart</Button>
                         </Card.Body>
                       </Card>
                  

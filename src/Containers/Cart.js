@@ -17,7 +17,7 @@ class Cart extends Component {
         })
 
         if (balance>total) {
-        window.account.sendMoney('blockshop.testnet',this.props.total*10000)
+        window.account.sendMoney('farm.testnet',this.props.total*10000)
         .then(()=>{
             window.contract.deliverProducts({checkout:CheckoutList})
         })
@@ -44,7 +44,8 @@ class Cart extends Component {
                 return <ListGroup.Item key={x}>{`${x}:${this.props.qtys[this.props.names.indexOf(x)]}`}</ListGroup.Item>
                 })}
                 <ListGroup.Item><Card.Header><b>Total: {this.props.total}</b> </Card.Header></ListGroup.Item>
-                <ListGroup.Item><Row><Col  className='d-flex justify-content-center'><Button onClick={this.props.clearCart}>Clear Cart</Button></Col><Col  className='d-flex justify-content-center'><Button onClick={this.startTransaction}>Submit</Button></Col></Row></ListGroup.Item>
+                <ListGroup.Item><Card.Header>Refresh the page after clicking submit! </Card.Header></ListGroup.Item>
+                <ListGroup.Item><Row><Col  className='d-flex justify-content-center'><Button style={{backgroundImage: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)"}} onClick={this.props.clearCart}>Clear Cart</Button></Col><Col  className='d-flex justify-content-center'><Button style={{backgroundImage: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)"}} onClick={this.startTransaction}>Submit</Button></Col></Row></ListGroup.Item>
                  </ListGroup>
                  
                  </Card>

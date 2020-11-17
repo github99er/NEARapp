@@ -4,6 +4,7 @@ import { login, logout, onSubmit } from './utils'
 import getConfig from './config'
 import {Navbar, NavDropdown, Nav,Button,Container,Row,Col} from 'react-bootstrap';
 import './scss/AppStyle.scss'
+import "./global.css"
 
 //Components
 
@@ -70,17 +71,17 @@ export default function App() {
 
 
   return (
-    <div className="App">
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">BlockShop</Navbar.Brand>
+    <div className="App bodyBackground">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" bg="transparent">
+  <Navbar.Brand href="#home"><h3>GIF Shop</h3></Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
     </Nav>
     <Nav>
-      <Nav.Link onClick={(window.accountId!=='')?logout:login} href="#memes">
+      <h3><Nav.Link style={{color: "white"}} onClick={(window.accountId!=='')?logout:login} href="#memes">
       {(window.accountId!=='')?window.accountId:'Please Login'}
-      </Nav.Link>
+      </Nav.Link></h3>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

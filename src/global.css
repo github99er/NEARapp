@@ -1,6 +1,7 @@
 .App{
-  background-color: black;
-  color: white;
+  background:url(https://media3.giphy.com/media/U3qYN8S0j3bpK/giphy.webp?cid=ecf05e47dcad5c856ae744a8bb3d948ab94a2c79556e7ffa&rid=giphy.webp);
+  background-size: cover;
+  color: black;
 }
 
 .pad{

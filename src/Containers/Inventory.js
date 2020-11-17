@@ -73,7 +73,7 @@ class Inventory extends Component {
         return (
             <div className=" InventoryContainer d-flex justify-content-center">
                 <Card style={{width:'18rem'}}>
-                <Card.Header>User's Inventory</Card.Header>
+                <Card.Header>My Inventory!</Card.Header>
                     <ListGroup>
                         {this.state.invName.map((x,index)=>(<ListGroup.Item key={x}>{x} x {this.state.invQty[index]}</ListGroup.Item>))}
                     </ListGroup>

@@ -324,7 +324,7 @@ checkPropTypes.resetWarningCache = function () {
 
 module.exports = checkPropTypes;
 },{"./lib/ReactPropTypesSecret":"../node_modules/prop-types/lib/ReactPropTypesSecret.js"}],"../node_modules/react/cjs/react.development.js":[function(require,module,exports) {
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -342,7 +342,7 @@ if ("development" !== "production") {
 
     var checkPropTypes = require('prop-types/checkPropTypes');
 
-    var ReactVersion = '16.13.1'; // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    var ReactVersion = '16.14.0'; // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
     // nor polyfill, then a plain number is used for performance.
 
     var hasSymbol = typeof Symbol === 'function' && Symbol.for;
@@ -3428,7 +3428,7 @@ if ("development" === 'production') {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
 },{"./cjs/scheduler-tracing.development.js":"../node_modules/scheduler/cjs/scheduler-tracing.development.js"}],"../node_modules/react-dom/cjs/react-dom.development.js":[function(require,module,exports) {
-/** @license React v16.13.1
+/** @license React v16.14.0
  * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -28166,7 +28166,7 @@ if ("development" !== "production") {
       };
     }
 
-    var ReactVersion = '16.13.1';
+    var ReactVersion = '16.14.0';
     setAttemptUserBlockingHydration(attemptUserBlockingHydration$1);
     setAttemptContinuousHydration(attemptContinuousHydration$1);
     setAttemptHydrationAtCurrentPriority(attemptHydrationAtCurrentPriority$1);
@@ -29049,7 +29049,7 @@ exports.KeyStore = KeyStore;
 
 },{}],"../node_modules/parcel-bundler/src/builtins/_empty.js":[function(require,module,exports) {
 
-},{}],"../node_modules/near-api-js/node_modules/tweetnacl/nacl-fast.js":[function(require,module,exports) {
+},{}],"../node_modules/tweetnacl/nacl-fast.js":[function(require,module,exports) {
 (function(nacl) {
 'use strict';
 
@@ -31570,9 +31570,7 @@ function fromByteArray (uint8) {
 
   // go through the array every three bytes, we'll deal with trailing stuff later
   for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {
-    parts.push(encodeChunk(
-      uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)
-    ))
+    parts.push(encodeChunk(uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)))
   }
 
   // pad the end with zeros, but make sure to not forget the extra bytes
@@ -31597,6 +31595,7 @@ function fromByteArray (uint8) {
 }
 
 },{}],"../node_modules/ieee754/index.js":[function(require,module,exports) {
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -31689,7 +31688,7 @@ module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],"../node_modules/buffer/index.js":[function(require,module,exports) {
+},{}],"../node_modules/node-libs-browser/node_modules/buffer/index.js":[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -33482,7 +33481,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":"../node_modules/base64-js/index.js","ieee754":"../node_modules/ieee754/index.js","isarray":"../node_modules/isarray/index.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/safe-buffer/index.js":[function(require,module,exports) {
+},{"base64-js":"../node_modules/base64-js/index.js","ieee754":"../node_modules/ieee754/index.js","isarray":"../node_modules/isarray/index.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/safe-buffer/index.js":[function(require,module,exports) {
 
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api */
@@ -33550,7 +33549,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":"../node_modules/buffer/index.js"}],"../node_modules/base-x/src/index.js":[function(require,module,exports) {
+},{"buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/base-x/src/index.js":[function(require,module,exports) {
 'use strict'
 // base-x encoding / decoding
 // Copyright (c) 2018 base-x contributors
@@ -38211,7 +38210,7 @@ function deserialize(schema, classType, buffer) {
 }
 exports.deserialize = deserialize;
 
-},{"bs58":"../node_modules/bs58/index.js","bn.js":"../node_modules/bn.js/lib/bn.js","text-encoding-utf-8":"../node_modules/text-encoding-utf-8/lib/encoding.lib.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/utils/enums.js":[function(require,module,exports) {
+},{"bs58":"../node_modules/bs58/index.js","bn.js":"../node_modules/bn.js/lib/bn.js","text-encoding-utf-8":"../node_modules/text-encoding-utf-8/lib/encoding.lib.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/utils/enums.js":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Assignable = exports.Enum = void 0;
@@ -38364,7 +38363,7 @@ class KeyPairEd25519 extends KeyPair {
 }
 exports.KeyPairEd25519 = KeyPairEd25519;
 
-},{"tweetnacl":"../node_modules/near-api-js/node_modules/tweetnacl/nacl-fast.js","./serialize":"../node_modules/near-api-js/lib/utils/serialize.js","./enums":"../node_modules/near-api-js/lib/utils/enums.js"}],"../node_modules/near-api-js/lib/key_stores/in_memory_key_store.js":[function(require,module,exports) {
+},{"tweetnacl":"../node_modules/tweetnacl/nacl-fast.js","./serialize":"../node_modules/near-api-js/lib/utils/serialize.js","./enums":"../node_modules/near-api-js/lib/utils/enums.js"}],"../node_modules/near-api-js/lib/key_stores/in_memory_key_store.js":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InMemoryKeyStore = void 0;
@@ -38698,7 +38697,7 @@ function adaptTransactionResult(txResult) {
 }
 exports.adaptTransactionResult = adaptTransactionResult;
 
-},{"buffer":"../node_modules/buffer/index.js"}],"../node_modules/depd/lib/browser/index.js":[function(require,module,exports) {
+},{"buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/depd/lib/browser/index.js":[function(require,module,exports) {
 /*!
  * depd
  * Copyright(c) 2015 Douglas Christopher Wilson
@@ -40243,7 +40242,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":"../node_modules/buffer/index.js"}],"../node_modules/core-util-is/lib/util.js":[function(require,module,exports) {
+},{"buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/core-util-is/lib/util.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -40353,7 +40352,7 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-},{"buffer":"../node_modules/buffer/index.js"}],"../node_modules/readable-stream/lib/internal/streams/BufferList.js":[function(require,module,exports) {
+},{"buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/readable-stream/lib/internal/streams/BufferList.js":[function(require,module,exports) {
 
 'use strict';
 
@@ -41390,7 +41389,72 @@ Duplex.prototype._destroy = function (err, cb) {
 
   pna.nextTick(cb, err);
 };
-},{"process-nextick-args":"../node_modules/process-nextick-args/index.js","core-util-is":"../node_modules/core-util-is/lib/util.js","inherits":"../node_modules/inherits/inherits_browser.js","./_stream_readable":"../node_modules/readable-stream/lib/_stream_readable.js","./_stream_writable":"../node_modules/readable-stream/lib/_stream_writable.js"}],"../node_modules/readable-stream/node_modules/string_decoder/lib/string_decoder.js":[function(require,module,exports) {
+},{"process-nextick-args":"../node_modules/process-nextick-args/index.js","core-util-is":"../node_modules/core-util-is/lib/util.js","inherits":"../node_modules/inherits/inherits_browser.js","./_stream_readable":"../node_modules/readable-stream/lib/_stream_readable.js","./_stream_writable":"../node_modules/readable-stream/lib/_stream_writable.js"}],"../node_modules/string_decoder/node_modules/safe-buffer/index.js":[function(require,module,exports) {
+
+/* eslint-disable node/no-deprecated-api */
+var buffer = require('buffer')
+var Buffer = buffer.Buffer
+
+// alternative to using Object.keys for old browsers
+function copyProps (src, dst) {
+  for (var key in src) {
+    dst[key] = src[key]
+  }
+}
+if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow) {
+  module.exports = buffer
+} else {
+  // Copy properties from require('buffer')
+  copyProps(buffer, exports)
+  exports.Buffer = SafeBuffer
+}
+
+function SafeBuffer (arg, encodingOrOffset, length) {
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+// Copy static methods from Buffer
+copyProps(Buffer, SafeBuffer)
+
+SafeBuffer.from = function (arg, encodingOrOffset, length) {
+  if (typeof arg === 'number') {
+    throw new TypeError('Argument must not be a number')
+  }
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+SafeBuffer.alloc = function (size, fill, encoding) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  var buf = Buffer(size)
+  if (fill !== undefined) {
+    if (typeof encoding === 'string') {
+      buf.fill(fill, encoding)
+    } else {
+      buf.fill(fill)
+    }
+  } else {
+    buf.fill(0)
+  }
+  return buf
+}
+
+SafeBuffer.allocUnsafe = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return Buffer(size)
+}
+
+SafeBuffer.allocUnsafeSlow = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return buffer.SlowBuffer(size)
+}
+
+},{"buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/string_decoder/lib/string_decoder.js":[function(require,module,exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -41688,7 +41752,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"safe-buffer":"../node_modules/readable-stream/node_modules/safe-buffer/index.js"}],"../node_modules/readable-stream/lib/_stream_readable.js":[function(require,module,exports) {
+},{"safe-buffer":"../node_modules/string_decoder/node_modules/safe-buffer/index.js"}],"../node_modules/readable-stream/lib/_stream_readable.js":[function(require,module,exports) {
 
 var global = arguments[3];
 var process = require("process");
@@ -42711,7 +42775,7 @@ function indexOf(xs, x) {
   }
   return -1;
 }
-},{"process-nextick-args":"../node_modules/process-nextick-args/index.js","isarray":"../node_modules/isarray/index.js","events":"../node_modules/events/events.js","./internal/streams/stream":"../node_modules/readable-stream/lib/internal/streams/stream-browser.js","safe-buffer":"../node_modules/readable-stream/node_modules/safe-buffer/index.js","core-util-is":"../node_modules/core-util-is/lib/util.js","inherits":"../node_modules/inherits/inherits_browser.js","util":"../node_modules/parcel-bundler/src/builtins/_empty.js","./internal/streams/BufferList":"../node_modules/readable-stream/lib/internal/streams/BufferList.js","./internal/streams/destroy":"../node_modules/readable-stream/lib/internal/streams/destroy.js","./_stream_duplex":"../node_modules/readable-stream/lib/_stream_duplex.js","string_decoder/":"../node_modules/readable-stream/node_modules/string_decoder/lib/string_decoder.js","process":"../node_modules/process/browser.js"}],"../node_modules/readable-stream/lib/_stream_transform.js":[function(require,module,exports) {
+},{"process-nextick-args":"../node_modules/process-nextick-args/index.js","isarray":"../node_modules/isarray/index.js","events":"../node_modules/events/events.js","./internal/streams/stream":"../node_modules/readable-stream/lib/internal/streams/stream-browser.js","safe-buffer":"../node_modules/readable-stream/node_modules/safe-buffer/index.js","core-util-is":"../node_modules/core-util-is/lib/util.js","inherits":"../node_modules/inherits/inherits_browser.js","util":"../node_modules/parcel-bundler/src/builtins/_empty.js","./internal/streams/BufferList":"../node_modules/readable-stream/lib/internal/streams/BufferList.js","./internal/streams/destroy":"../node_modules/readable-stream/lib/internal/streams/destroy.js","./_stream_duplex":"../node_modules/readable-stream/lib/_stream_duplex.js","string_decoder/":"../node_modules/string_decoder/lib/string_decoder.js","process":"../node_modules/process/browser.js"}],"../node_modules/readable-stream/lib/_stream_transform.js":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -43212,7 +43276,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 	}
 }
 
-},{"./capability":"../node_modules/stream-http/lib/capability.js","inherits":"../node_modules/inherits/inherits_browser.js","readable-stream":"../node_modules/readable-stream/readable-browser.js","process":"../node_modules/process/browser.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/to-arraybuffer/index.js":[function(require,module,exports) {
+},{"./capability":"../node_modules/stream-http/lib/capability.js","inherits":"../node_modules/inherits/inherits_browser.js","readable-stream":"../node_modules/readable-stream/readable-browser.js","process":"../node_modules/process/browser.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/to-arraybuffer/index.js":[function(require,module,exports) {
 
 var Buffer = require('buffer').Buffer
 
@@ -43242,7 +43306,7 @@ module.exports = function (buf) {
 	}
 }
 
-},{"buffer":"../node_modules/buffer/index.js"}],"../node_modules/stream-http/lib/request.js":[function(require,module,exports) {
+},{"buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/stream-http/lib/request.js":[function(require,module,exports) {
 var Buffer = require("buffer").Buffer;
 var global = arguments[3];
 var process = require("process");
@@ -43574,7 +43638,7 @@ var unsafeHeaders = [
 	'via'
 ]
 
-},{"./capability":"../node_modules/stream-http/lib/capability.js","inherits":"../node_modules/inherits/inherits_browser.js","./response":"../node_modules/stream-http/lib/response.js","readable-stream":"../node_modules/readable-stream/readable-browser.js","to-arraybuffer":"../node_modules/to-arraybuffer/index.js","buffer":"../node_modules/buffer/index.js","process":"../node_modules/process/browser.js"}],"../node_modules/xtend/immutable.js":[function(require,module,exports) {
+},{"./capability":"../node_modules/stream-http/lib/capability.js","inherits":"../node_modules/inherits/inherits_browser.js","./response":"../node_modules/stream-http/lib/response.js","readable-stream":"../node_modules/readable-stream/readable-browser.js","to-arraybuffer":"../node_modules/to-arraybuffer/index.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js","process":"../node_modules/process/browser.js"}],"../node_modules/xtend/immutable.js":[function(require,module,exports) {
 module.exports = extend;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -47345,7 +47409,7 @@ class JsonRpcProvider extends provider_1.Provider {
 }
 exports.JsonRpcProvider = JsonRpcProvider;
 
-},{"depd":"../node_modules/depd/lib/browser/index.js","./provider":"../node_modules/near-api-js/lib/providers/provider.js","../utils/web":"../node_modules/near-api-js/lib/utils/web.js","../utils/errors":"../node_modules/near-api-js/lib/utils/errors.js","../utils/serialize":"../node_modules/near-api-js/lib/utils/serialize.js","../utils/rpc_errors":"../node_modules/near-api-js/lib/utils/rpc_errors.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/providers/index.js":[function(require,module,exports) {
+},{"depd":"../node_modules/depd/lib/browser/index.js","./provider":"../node_modules/near-api-js/lib/providers/provider.js","../utils/web":"../node_modules/near-api-js/lib/utils/web.js","../utils/errors":"../node_modules/near-api-js/lib/utils/errors.js","../utils/serialize":"../node_modules/near-api-js/lib/utils/serialize.js","../utils/rpc_errors":"../node_modules/near-api-js/lib/utils/rpc_errors.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/providers/index.js":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TypedError = exports.getTransactionLastResult = exports.FinalExecutionStatusBasic = exports.JsonRpcProvider = exports.Provider = void 0;
@@ -48035,7 +48099,7 @@ var Buffer = require("buffer").Buffer;
   }
 })();
 
-},{"process":"../node_modules/process/browser.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/transaction.js":[function(require,module,exports) {
+},{"process":"../node_modules/process/browser.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/transaction.js":[function(require,module,exports) {
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -48645,7 +48709,7 @@ class Account {
 }
 exports.Account = Account;
 
-},{"bn.js":"../node_modules/bn.js/lib/bn.js","./transaction":"../node_modules/near-api-js/lib/transaction.js","./providers":"../node_modules/near-api-js/lib/providers/index.js","./utils/serialize":"../node_modules/near-api-js/lib/utils/serialize.js","./utils/key_pair":"../node_modules/near-api-js/lib/utils/key_pair.js","./utils/errors":"../node_modules/near-api-js/lib/utils/errors.js","./utils/rpc_errors":"../node_modules/near-api-js/lib/utils/rpc_errors.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/account_creator.js":[function(require,module,exports) {
+},{"bn.js":"../node_modules/bn.js/lib/bn.js","./transaction":"../node_modules/near-api-js/lib/transaction.js","./providers":"../node_modules/near-api-js/lib/providers/index.js","./utils/serialize":"../node_modules/near-api-js/lib/utils/serialize.js","./utils/key_pair":"../node_modules/near-api-js/lib/utils/key_pair.js","./utils/errors":"../node_modules/near-api-js/lib/utils/errors.js","./utils/rpc_errors":"../node_modules/near-api-js/lib/utils/rpc_errors.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/account_creator.js":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UrlAccountCreator = exports.LocalAccountCreator = exports.AccountCreator = void 0;
@@ -50126,7 +50190,7 @@ class ConnectedWalletAccount extends account_1.Account {
     }
 }
 
-},{"./account":"../node_modules/near-api-js/lib/account.js","./transaction":"../node_modules/near-api-js/lib/transaction.js","./utils":"../node_modules/near-api-js/lib/utils/index.js","./utils/serialize":"../node_modules/near-api-js/lib/utils/serialize.js","buffer":"../node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/common-index.js":[function(require,module,exports) {
+},{"./account":"../node_modules/near-api-js/lib/account.js","./transaction":"../node_modules/near-api-js/lib/transaction.js","./utils":"../node_modules/near-api-js/lib/utils/index.js","./utils/serialize":"../node_modules/near-api-js/lib/utils/serialize.js","buffer":"../node_modules/node-libs-browser/node_modules/buffer/index.js"}],"../node_modules/near-api-js/lib/common-index.js":[function(require,module,exports) {
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -50207,7 +50271,7 @@ exports.keyStores = __importStar(require("./key_stores/browser-index"));
 __exportStar(require("./common-index"), exports);
 
 },{"./key_stores/browser-index":"../node_modules/near-api-js/lib/key_stores/browser-index.js","./common-index":"../node_modules/near-api-js/lib/common-index.js"}],"config.js":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1600207865760-4905120" || 'blockshop';
+const CONTRACT_NAME = "dev-1605586955788-1585188" || 'near-blank-project.farm.testnet';
 
 function getConfig(env) {
   switch (env) {
@@ -50247,7 +50311,7 @@ function getConfig(env) {
       return {
         networkId: 'local',
         nodeUrl: 'http://localhost:3030',
-        keyPath: `${"/Users/doriancrutcher"}/.near/validator_key.json`,
+        keyPath: `${"/Users/Ryan"}/.near/validator_key.json`,
         walletUrl: 'http://localhost:4000/wallet',
         contractName: CONTRACT_NAME
       };
@@ -50291,7 +50355,7 @@ var _config = _interopRequireDefault(require("./config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const nearConfig = (0, _config.default)("development" || 'development'); // Initialize contract & set global variables
+const nearConfig = (0, _config.default)("development" || 'testnet'); // Initialize contract & set global variables
 
 async function initContract() {
   // Initialize connection to the NEAR testnet
@@ -53235,6 +53299,8 @@ var _Collapse = _interopRequireDefault(require("./Collapse"));
 
 var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
 
+var _SelectableContext = _interopRequireDefault(require("./SelectableContext"));
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -53245,17 +53311,21 @@ var AccordionCollapse = _react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       eventKey = _ref.eventKey,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "eventKey"]);
-  var contextEventKey = (0, _react.useContext)(_AccordionContext.default);
-  return /*#__PURE__*/_react.default.createElement(_Collapse.default, (0, _extends2.default)({
+  var contextEventKey = (0, _react.useContext)(_AccordionContext.default); // Empty SelectableContext is to prevent elements in the collapse
+  // from collapsing the accordion when clicked.
+
+  return /*#__PURE__*/_react.default.createElement(_SelectableContext.default.Provider, {
+    value: null
+  }, /*#__PURE__*/_react.default.createElement(_Collapse.default, (0, _extends2.default)({
     ref: ref,
     in: contextEventKey === eventKey
-  }, props), /*#__PURE__*/_react.default.createElement("div", null, _react.default.Children.only(children)));
+  }, props), /*#__PURE__*/_react.default.createElement("div", null, _react.default.Children.only(children))));
 });
 
 AccordionCollapse.displayName = 'AccordionCollapse';
 var _default = AccordionCollapse;
 exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","react":"../node_modules/react/index.js","./Collapse":"../node_modules/react-bootstrap/esm/Collapse.js","./AccordionContext":"../node_modules/react-bootstrap/esm/AccordionContext.js"}],"../node_modules/react-bootstrap/esm/Accordion.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","react":"../node_modules/react/index.js","./Collapse":"../node_modules/react-bootstrap/esm/Collapse.js","./AccordionContext":"../node_modules/react-bootstrap/esm/AccordionContext.js","./SelectableContext":"../node_modules/react-bootstrap/esm/SelectableContext.js"}],"../node_modules/react-bootstrap/esm/Accordion.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53943,7 +54013,7 @@ var Button = _react.default.forwardRef(function (_ref, ref) {
       as = _ref.as,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "variant", "size", "active", "className", "block", "type", "as"]);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'btn');
-  var classes = (0, _classnames.default)(className, prefix, active && 'active', prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
+  var classes = (0, _classnames.default)(className, prefix, active && 'active', variant && prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
 
   if (props.href) {
     return /*#__PURE__*/_react.default.createElement(_SafeAnchor.default, (0, _extends2.default)({}, props, {
@@ -54491,14 +54561,37 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _ThemeProvider = require("./ThemeProvider");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _default = (0, _createWithBsPrefix.default)('carousel-item');
+var CarouselItem = _react.default.forwardRef(function (_ref, ref) {
+  var _ref$as = _ref.as,
+      Component = _ref$as === void 0 ? 'div' : _ref$as,
+      bsPrefix = _ref.bsPrefix,
+      children = _ref.children,
+      className = _ref.className,
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "bsPrefix", "children", "className"]);
+  var finalClassName = (0, _classnames.default)(className, (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'carousel-item'));
+  return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
+    ref: ref
+  }, props, {
+    className: finalClassName
+  }), children);
+});
 
+CarouselItem.displayName = 'CarouselItem';
+var _default = CarouselItem;
 exports.default = _default;
-},{"./createWithBsPrefix":"../node_modules/react-bootstrap/esm/createWithBsPrefix.js"}],"../node_modules/react-bootstrap/esm/ElementChildren.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","classnames":"../node_modules/classnames/index.js","react":"../node_modules/react/index.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js"}],"../node_modules/react-bootstrap/esm/ElementChildren.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54555,6 +54648,8 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 var _useEventCallback = _interopRequireDefault(require("@restart/hooks/useEventCallback"));
 
 var _useUpdateEffect = _interopRequireDefault(require("@restart/hooks/useUpdateEffect"));
+
+var _useCommittedRef = _interopRequireDefault(require("@restart/hooks/useCommittedRef"));
 
 var _useTimeout = _interopRequireDefault(require("@restart/hooks/useTimeout"));
 
@@ -54775,7 +54870,6 @@ function CarouselFunc(uncontrolledProps, ref) {
   if (!isSliding && activeIndex !== renderedActiveIndex) {
     if (nextDirectionRef.current) {
       setDirection(nextDirectionRef.current);
-      nextDirectionRef.current = null;
     } else {
       setDirection((activeIndex || 0) > renderedActiveIndex ? 'next' : 'prev');
     }
@@ -54787,8 +54881,23 @@ function CarouselFunc(uncontrolledProps, ref) {
     setRenderedActiveIndex(activeIndex || 0);
   }
 
-  var numChildren = _react.default.Children.toArray(children).filter(_react.default.isValidElement).length;
+  (0, _react.useEffect)(function () {
+    if (nextDirectionRef.current) {
+      nextDirectionRef.current = null;
+    }
+  });
+  var numChildren = 0;
+  var activeChildInterval; // Iterate to grab all of the children's interval values
+  // (and count them, too)
 
+  (0, _ElementChildren.forEach)(children, function (child, index) {
+    ++numChildren;
+
+    if (index === activeIndex) {
+      activeChildInterval = child.props.interval;
+    }
+  });
+  var activeChildIntervalRef = (0, _useCommittedRef.default)(activeChildInterval);
   var prev = (0, _react.useCallback)(function (event) {
     if (isSliding) {
       return;
@@ -54976,17 +55085,19 @@ function CarouselFunc(uncontrolledProps, ref) {
   var shouldPlay = interval != null && !pausedOnHover && !pausedOnTouch && !isSliding;
   var intervalHandleRef = (0, _react.useRef)();
   (0, _react.useEffect)(function () {
+    var _ref, _activeChildIntervalR;
+
     if (!shouldPlay) {
       return undefined;
     }
 
-    intervalHandleRef.current = window.setInterval(document.visibilityState ? nextWhenVisible : next, interval || undefined);
+    intervalHandleRef.current = window.setInterval(document.visibilityState ? nextWhenVisible : next, (_ref = (_activeChildIntervalR = activeChildIntervalRef.current) != null ? _activeChildIntervalR : interval) != null ? _ref : undefined);
     return function () {
       if (intervalHandleRef.current !== null) {
         clearInterval(intervalHandleRef.current);
       }
     };
-  }, [shouldPlay, next, interval, nextWhenVisible]);
+  }, [shouldPlay, next, activeChildIntervalRef, interval, nextWhenVisible]);
   var indicatorOnClicks = (0, _react.useMemo)(function () {
     return indicators && Array.from({
       length: numChildren
@@ -55054,7 +55165,7 @@ Carousel.Caption = _CarouselCaption.default;
 Carousel.Item = _CarouselItem.default;
 var _default = Carousel;
 exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","@restart/hooks/useEventCallback":"../node_modules/@restart/hooks/esm/useEventCallback.js","@restart/hooks/useUpdateEffect":"../node_modules/@restart/hooks/esm/useUpdateEffect.js","@restart/hooks/useTimeout":"../node_modules/@restart/hooks/esm/useTimeout.js","classnames":"../node_modules/classnames/index.js","dom-helpers/transitionEnd":"../node_modules/dom-helpers/esm/transitionEnd.js","react-transition-group/Transition":"../node_modules/react-transition-group/esm/Transition.js","prop-types":"../node_modules/prop-types/index.js","react":"../node_modules/react/index.js","uncontrollable":"../node_modules/uncontrollable/esm/index.js","./CarouselCaption":"../node_modules/react-bootstrap/esm/CarouselCaption.js","./CarouselItem":"../node_modules/react-bootstrap/esm/CarouselItem.js","./ElementChildren":"../node_modules/react-bootstrap/esm/ElementChildren.js","./SafeAnchor":"../node_modules/react-bootstrap/esm/SafeAnchor.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js","./triggerBrowserReflow":"../node_modules/react-bootstrap/esm/triggerBrowserReflow.js"}],"../node_modules/react-bootstrap/esm/Col.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","@restart/hooks/useEventCallback":"../node_modules/@restart/hooks/esm/useEventCallback.js","@restart/hooks/useUpdateEffect":"../node_modules/@restart/hooks/esm/useUpdateEffect.js","@restart/hooks/useCommittedRef":"../node_modules/@restart/hooks/esm/useCommittedRef.js","@restart/hooks/useTimeout":"../node_modules/@restart/hooks/esm/useTimeout.js","classnames":"../node_modules/classnames/index.js","dom-helpers/transitionEnd":"../node_modules/dom-helpers/esm/transitionEnd.js","react-transition-group/Transition":"../node_modules/react-transition-group/esm/Transition.js","prop-types":"../node_modules/prop-types/index.js","react":"../node_modules/react/index.js","uncontrollable":"../node_modules/uncontrollable/esm/index.js","./CarouselCaption":"../node_modules/react-bootstrap/esm/CarouselCaption.js","./CarouselItem":"../node_modules/react-bootstrap/esm/CarouselItem.js","./ElementChildren":"../node_modules/react-bootstrap/esm/ElementChildren.js","./SafeAnchor":"../node_modules/react-bootstrap/esm/SafeAnchor.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js","./triggerBrowserReflow":"../node_modules/react-bootstrap/esm/triggerBrowserReflow.js"}],"../node_modules/react-bootstrap/esm/Col.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55394,7 +55505,62 @@ function getLayoutRect(element) {
     height: element.offsetHeight
   };
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/contains.js":[function(require,module,exports) {
+},{}],"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = getWindow;
+
+/*:: import type { Window } from '../types'; */
+
+/*:: declare function getWindow(node: Node | Window): Window; */
+function getWindow(node) {
+  if (node.toString() !== '[object Window]') {
+    var ownerDocument = node.ownerDocument;
+    return ownerDocument ? ownerDocument.defaultView || window : window;
+  }
+
+  return node;
+}
+},{}],"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isElement = isElement;
+exports.isHTMLElement = isHTMLElement;
+exports.isShadowRoot = isShadowRoot;
+
+var _getWindow = _interopRequireDefault(require("./getWindow.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*:: declare function isElement(node: mixed): boolean %checks(node instanceof
+  Element); */
+function isElement(node) {
+  var OwnElement = (0, _getWindow.default)(node).Element;
+  return node instanceof OwnElement || node instanceof Element;
+}
+/*:: declare function isHTMLElement(node: mixed): boolean %checks(node instanceof
+  HTMLElement); */
+
+
+function isHTMLElement(node) {
+  var OwnElement = (0, _getWindow.default)(node).HTMLElement;
+  return node instanceof OwnElement || node instanceof HTMLElement;
+}
+/*:: declare function isShadowRoot(node: mixed): boolean %checks(node instanceof
+  ShadowRoot); */
+
+
+function isShadowRoot(node) {
+  var OwnElement = (0, _getWindow.default)(node).ShadowRoot;
+  return node instanceof OwnElement || node instanceof ShadowRoot;
+}
+},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/dom-utils/contains.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55402,14 +55568,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = contains;
 
+var _instanceOf = require("./instanceOf.js");
+
 function contains(parent, child) {
-  // $FlowFixMe: hasOwnProperty doesn't seem to work in tests
-  var isShadow = Boolean(child.getRootNode && child.getRootNode().host); // First, attempt with faster native method
+  var rootNode = child.getRootNode && child.getRootNode(); // First, attempt with faster native method
 
   if (parent.contains(child)) {
     return true;
   } // then fallback to custom implementation with Shadow DOM support
-  else if (isShadow) {
+  else if (rootNode && (0, _instanceOf.isShadowRoot)(rootNode)) {
       var next = child;
 
       do {
@@ -55425,26 +55592,7 @@ function contains(parent, child) {
 
   return false;
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = getWindow;
-
-/*:: import type { Window } from '../types'; */
-
-/*:: declare function getWindow(node: Node | Window): Window; */
-function getWindow(node) {
-  if (node.toString() !== '[object Window]') {
-    var ownerDocument = node.ownerDocument;
-    return ownerDocument ? ownerDocument.defaultView : window;
-  }
-
-  return node;
-}
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js":[function(require,module,exports) {
+},{"./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55469,33 +55617,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function getComputedStyle(element) {
   return (0, _getWindow.default)(element).getComputedStyle(element);
-}
-},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.isElement = isElement;
-exports.isHTMLElement = isHTMLElement;
-
-var _getWindow = _interopRequireDefault(require("./getWindow.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/*:: declare function isElement(node: mixed): boolean %checks(node instanceof
-  Element); */
-function isElement(node) {
-  var OwnElement = (0, _getWindow.default)(node).Element;
-  return node instanceof OwnElement || node instanceof Element;
-}
-/*:: declare function isHTMLElement(node: mixed): boolean %checks(node instanceof
-  HTMLElement); */
-
-
-function isHTMLElement(node) {
-  var OwnElement = (0, _getWindow.default)(node).HTMLElement;
-  return node instanceof OwnElement || node instanceof HTMLElement;
 }
 },{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/dom-utils/isTableElement.js":[function(require,module,exports) {
 "use strict";
@@ -55524,7 +55645,7 @@ var _instanceOf = require("./instanceOf.js");
 
 function getDocumentElement(element) {
   // $FlowFixMe: assume body is always available
-  return ((0, _instanceOf.isElement)(element) ? element.ownerDocument : element.document).documentElement;
+  return (((0, _instanceOf.isElement)(element) ? element.ownerDocument : element.document) || window.document).documentElement;
 }
 },{"./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getParentNode.js":[function(require,module,exports) {
 "use strict";
@@ -57495,17 +57616,12 @@ function mergeByName(modifiers) {
     return merged[key];
   });
 }
-},{}],"../node_modules/@popperjs/core/lib/index.js":[function(require,module,exports) {
+},{}],"../node_modules/@popperjs/core/lib/createPopper.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _exportNames = {
-  popperGenerator: true,
-  createPopper: true,
-  detectOverflow: true
-};
 exports.popperGenerator = popperGenerator;
 Object.defineProperty(exports, "detectOverflow", {
   enumerable: true,
@@ -57542,17 +57658,6 @@ var _detectOverflow = _interopRequireDefault(require("./utils/detectOverflow.js"
 var _instanceOf = require("./dom-utils/instanceOf.js");
 
 var _enums = require("./enums.js");
-
-Object.keys(_enums).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _enums[key];
-    }
-  });
-});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -57810,24 +57915,24 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "createPopper", {
   enumerable: true,
   get: function () {
-    return _index.createPopper;
+    return _createPopper.createPopper;
   }
 });
 Object.defineProperty(exports, "popperGenerator", {
   enumerable: true,
   get: function () {
-    return _index.popperGenerator;
+    return _createPopper.popperGenerator;
   }
 });
 Object.defineProperty(exports, "detectOverflow", {
   enumerable: true,
   get: function () {
-    return _index.detectOverflow;
+    return _createPopper.detectOverflow;
   }
 });
 
-var _index = require("./index.js");
-},{"./index.js":"../node_modules/@popperjs/core/lib/index.js"}],"../node_modules/react-overlays/esm/popper.js":[function(require,module,exports) {
+var _createPopper = require("./createPopper.js");
+},{"./createPopper.js":"../node_modules/@popperjs/core/lib/createPopper.js"}],"../node_modules/react-overlays/esm/popper.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -57934,6 +58039,11 @@ var ariaDescribedByModifier = {
 
     if (popper.id && role === 'tooltip' && 'setAttribute' in reference) {
       var ids = reference.getAttribute('aria-describedby');
+
+      if (ids && ids.split(',').indexOf(popper.id) !== -1) {
+        return;
+      }
+
       reference.setAttribute('aria-describedby', ids ? ids + "," + popper.id : popper.id);
     }
   }
@@ -58250,14 +58360,33 @@ function useRootClose(ref, onRootClose, _temp) {
     }
   });
   (0, _react.useEffect)(function () {
-    if (disabled || ref == null) return undefined;
+    if (disabled || ref == null) return undefined; // Store the current event to avoid triggering handlers immediately
+    // https://github.com/facebook/react/issues/20074
+
+    var currentEvent = window.event;
     var doc = (0, _ownerDocument.default)(getRefTarget(ref)); // Use capture for this listener so it fires before React's listener, to
     // avoid false positives in the contains() check below if the target DOM
     // element is removed in the React mouse callback.
 
     var removeMouseCaptureListener = (0, _listen.default)(doc, clickTrigger, handleMouseCapture, true);
-    var removeMouseListener = (0, _listen.default)(doc, clickTrigger, handleMouse);
-    var removeKeyupListener = (0, _listen.default)(doc, 'keyup', handleKeyUp);
+    var removeMouseListener = (0, _listen.default)(doc, clickTrigger, function (e) {
+      // skip if this event is the same as the one running when we added the handlers
+      if (e === currentEvent) {
+        currentEvent = undefined;
+        return;
+      }
+
+      handleMouse(e);
+    });
+    var removeKeyupListener = (0, _listen.default)(doc, 'keyup', function (e) {
+      // skip if this event is the same as the one running when we added the handlers
+      if (e === currentEvent) {
+        currentEvent = undefined;
+        return;
+      }
+
+      handleKeyUp(e);
+    });
     var mobileSafariHackListeners = [];
 
     if ('ontouchstart' in doc.documentElement) {
@@ -59004,9 +59133,10 @@ var DropdownItem = _react.default.forwardRef(function (_ref, ref) {
   var navContext = (0, _react.useContext)(_NavContext.default);
 
   var _ref2 = navContext || {},
-      activeKey = _ref2.activeKey;
+      activeKey = _ref2.activeKey; // TODO: Restrict eventKey to string in v5?
 
-  var key = (0, _SelectableContext.makeEventKey)(eventKey || null, href);
+
+  var key = (0, _SelectableContext.makeEventKey)(eventKey, href);
   var active = propActive == null && key != null ? (0, _SelectableContext.makeEventKey)(activeKey) === key : propActive;
   var handleClick = (0, _useEventCallback.default)(function (event) {
     // SafeAnchor handles the disabled case, but we handle it here
@@ -59153,6 +59283,8 @@ var _react = require("react");
 
 var _hasClass = _interopRequireDefault(require("dom-helpers/hasClass"));
 
+var _ThemeProvider = require("./ThemeProvider");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getMargins(element) {
@@ -59172,12 +59304,14 @@ function getMargins(element) {
 function usePopperMarginModifiers() {
   var overlayRef = (0, _react.useRef)(null);
   var margins = (0, _react.useRef)(null);
+  var popoverClass = (0, _ThemeProvider.useBootstrapPrefix)(undefined, 'popover');
+  var dropdownMenuClass = (0, _ThemeProvider.useBootstrapPrefix)(undefined, 'dropdown-menu');
   var callback = (0, _react.useCallback)(function (overlay) {
-    if (!overlay || !((0, _hasClass.default)(overlay, 'popover') || (0, _hasClass.default)(overlay, 'dropdown-menu'))) return;
+    if (!overlay || !((0, _hasClass.default)(overlay, popoverClass) || (0, _hasClass.default)(overlay, dropdownMenuClass))) return;
     margins.current = getMargins(overlay);
     overlay.style.margin = '0';
     overlayRef.current = overlay;
-  }, []);
+  }, [popoverClass, dropdownMenuClass]);
   var offset = (0, _react.useMemo)(function () {
     return {
       name: 'offset',
@@ -59221,7 +59355,7 @@ function usePopperMarginModifiers() {
       effect: function effect(_ref2) {
         var state = _ref2.state;
 
-        if (!overlayRef.current || !state.elements.arrow || !(0, _hasClass.default)(overlayRef.current, 'popover') || !state.modifiersData['arrow#persistent']) {
+        if (!overlayRef.current || !state.elements.arrow || !(0, _hasClass.default)(overlayRef.current, popoverClass) || !state.modifiersData['arrow#persistent']) {
           return undefined;
         }
 
@@ -59242,16 +59376,16 @@ function usePopperMarginModifiers() {
         };
       }
     };
-  }, []);
+  }, [popoverClass]);
   return [callback, [offset, popoverArrowMargins]];
 }
-},{"react":"../node_modules/react/index.js","dom-helpers/hasClass":"../node_modules/dom-helpers/esm/hasClass.js"}],"../node_modules/react-bootstrap/esm/DropdownMenu.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","dom-helpers/hasClass":"../node_modules/dom-helpers/esm/hasClass.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js"}],"../node_modules/react-bootstrap/esm/DropdownMenu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = exports.alignPropType = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/extends"));
 
@@ -59259,11 +59393,15 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _react = _interopRequireWildcard(require("react"));
 
 var _DropdownMenu = require("react-overlays/DropdownMenu");
 
 var _useMergedRefs = _interopRequireDefault(require("@restart/hooks/useMergedRefs"));
+
+var _warning = _interopRequireDefault(require("warning"));
 
 var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
 
@@ -59279,7 +59417,21 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var alignDirection = _propTypes.default.oneOf(['left', 'right']);
+
+var alignPropType = _propTypes.default.oneOfType([alignDirection, _propTypes.default.shape({
+  sm: alignDirection
+}), _propTypes.default.shape({
+  md: alignDirection
+}), _propTypes.default.shape({
+  lg: alignDirection
+}), _propTypes.default.shape({
+  xl: alignDirection
+})]);
+
+exports.alignPropType = alignPropType;
 var defaultProps = {
+  align: 'left',
   alignRight: false,
   flip: true
 }; // TODO: remove this hack
@@ -59287,6 +59439,7 @@ var defaultProps = {
 var DropdownMenu = _react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
+      align = _ref.align,
       alignRight = _ref.alignRight,
       rootCloseEvent = _ref.rootCloseEvent,
       flip = _ref.flip,
@@ -59295,7 +59448,7 @@ var DropdownMenu = _react.default.forwardRef(function (_ref, ref) {
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       popperConfig = _ref.popperConfig,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "alignRight", "rootCloseEvent", "flip", "show", "renderOnMount", "as", "popperConfig"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "align", "alignRight", "rootCloseEvent", "flip", "show", "renderOnMount", "as", "popperConfig"]);
   var isNavbar = (0, _react.useContext)(_NavbarContext.default);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'dropdown-menu');
 
@@ -59303,12 +59456,33 @@ var DropdownMenu = _react.default.forwardRef(function (_ref, ref) {
       popperRef = _usePopperMarginModif[0],
       marginModifiers = _usePopperMarginModif[1];
 
+  var alignClasses = [];
+
+  if (align) {
+    if (typeof align === 'object') {
+      var keys = Object.keys(align);
+      "development" !== "production" ? (0, _warning.default)(keys.length === 1, 'There should only be 1 breakpoint when passing an object to `align`') : void 0;
+
+      if (keys.length) {
+        var brkPoint = keys[0];
+        var direction = align[brkPoint]; // .dropdown-menu-right is required for responsively aligning
+        // left in addition to align left classes.
+        // Reuse alignRight to toggle the class below.
+
+        alignRight = direction === 'left';
+        alignClasses.push(prefix + "-" + brkPoint + "-" + direction);
+      }
+    } else if (align === 'right') {
+      alignRight = true;
+    }
+  }
+
   var _ref2 = (0, _DropdownMenu.useDropdownMenu)({
     flip: flip,
     rootCloseEvent: rootCloseEvent,
     show: showProps,
     alignEnd: alignRight,
-    usePopper: !isNavbar,
+    usePopper: !isNavbar && alignClasses.length === 0,
     popperConfig: (0, _extends2.default)({}, popperConfig, {
       modifiers: marginModifiers.concat((popperConfig == null ? void 0 : popperConfig.modifiers) || [])
     })
@@ -59337,7 +59511,7 @@ var DropdownMenu = _react.default.forwardRef(function (_ref, ref) {
   }
 
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, menuProps, {
-    className: (0, _classnames.default)(className, prefix, show && 'show', alignEnd && prefix + "-right")
+    className: _classnames.default.apply(void 0, [className, prefix, show && 'show', alignEnd && prefix + "-right"].concat(alignClasses))
   }));
 });
 
@@ -59345,7 +59519,7 @@ DropdownMenu.displayName = 'DropdownMenu';
 DropdownMenu.defaultProps = defaultProps;
 var _default = DropdownMenu;
 exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","classnames":"../node_modules/classnames/index.js","react":"../node_modules/react/index.js","react-overlays/DropdownMenu":"../node_modules/react-overlays/esm/DropdownMenu.js","@restart/hooks/useMergedRefs":"../node_modules/@restart/hooks/esm/useMergedRefs.js","./NavbarContext":"../node_modules/react-bootstrap/esm/NavbarContext.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js","./useWrappedRefWithWarning":"../node_modules/react-bootstrap/esm/useWrappedRefWithWarning.js","./usePopperMarginModifiers":"../node_modules/react-bootstrap/esm/usePopperMarginModifiers.js"}],"../node_modules/prop-types-extra/lib/isRequiredForA11y.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","classnames":"../node_modules/classnames/index.js","prop-types":"../node_modules/prop-types/index.js","react":"../node_modules/react/index.js","react-overlays/DropdownMenu":"../node_modules/react-overlays/esm/DropdownMenu.js","@restart/hooks/useMergedRefs":"../node_modules/@restart/hooks/esm/useMergedRefs.js","warning":"../node_modules/warning/warning.js","./NavbarContext":"../node_modules/react-bootstrap/esm/NavbarContext.js","./ThemeProvider":"../node_modules/react-bootstrap/esm/ThemeProvider.js","./useWrappedRefWithWarning":"../node_modules/react-bootstrap/esm/useWrappedRefWithWarning.js","./usePopperMarginModifiers":"../node_modules/react-bootstrap/esm/usePopperMarginModifiers.js"}],"../node_modules/prop-types-extra/lib/isRequiredForA11y.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -59403,11 +59577,10 @@ var DropdownToggle = _react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       split = _ref.split,
       className = _ref.className,
-      children = _ref.children,
       childBsPrefix = _ref.childBsPrefix,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? _Button.default : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "split", "className", "children", "childBsPrefix", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "split", "className", "childBsPrefix", "as"]);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'dropdown-toggle');
 
   if (childBsPrefix !== undefined) {
@@ -59424,7 +59597,7 @@ var DropdownToggle = _react.default.forwardRef(function (_ref, ref) {
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     onClick: toggle,
     className: (0, _classnames.default)(className, prefix, split && prefix + "-split")
-  }, toggleProps, props), children);
+  }, toggleProps, props));
 });
 
 DropdownToggle.displayName = 'DropdownToggle';
@@ -59572,7 +59745,11 @@ var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 
 var _DropdownToggle = _interopRequireDefault(require("./DropdownToggle"));
 
-var _DropdownMenu = _interopRequireDefault(require("./DropdownMenu"));
+var _DropdownMenu = _interopRequireWildcard(require("./DropdownMenu"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -59596,6 +59773,15 @@ var propTypes = {
   /** Disables both Buttons  */
   disabled: _propTypes.default.bool,
 
+  /**
+   * Aligns the dropdown menu responsively.
+   *
+   * _see [DropdownMenu](#dropdown-menu-props) for more details_
+   *
+   * @type {"left"|"right"|{ sm: "left"|"right" }|{ md: "left"|"right" }|{ lg: "left"|"right" }|{ xl: "left"|"right"} }
+   */
+  menuAlign: _DropdownMenu.alignPropType,
+
   /** An ARIA accessible role applied to the Menu component. When set to 'menu', The dropdown */
   menuRole: _propTypes.default.string,
 
@@ -59605,7 +59791,7 @@ var propTypes = {
   /**
    *  Which event when fired outside the component will cause it to be closed.
    *
-   * _see [DropdownMenu](#menu-props) for more details_
+   * _see [DropdownMenu](#dropdown-menu-props) for more details_
    */
   rootCloseEvent: _propTypes.default.string,
 
@@ -59634,12 +59820,13 @@ var DropdownButton = _react.default.forwardRef(function (_ref, ref) {
       rootCloseEvent = _ref.rootCloseEvent,
       variant = _ref.variant,
       size = _ref.size,
+      menuAlign = _ref.menuAlign,
       menuRole = _ref.menuRole,
       renderMenuOnMount = _ref.renderMenuOnMount,
       disabled = _ref.disabled,
       href = _ref.href,
       id = _ref.id,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["title", "children", "bsPrefix", "rootCloseEvent", "variant", "size", "menuRole", "renderMenuOnMount", "disabled", "href", "id"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["title", "children", "bsPrefix", "rootCloseEvent", "variant", "size", "menuAlign", "menuRole", "renderMenuOnMount", "disabled", "href", "id"]);
   return /*#__PURE__*/_react.default.createElement(_Dropdown.default, (0, _extends2.default)({
     ref: ref
   }, props), /*#__PURE__*/_react.default.createElement(_DropdownToggle.default, {
@@ -59650,6 +59837,7 @@ var DropdownButton = _react.default.forwardRef(function (_ref, ref) {
     disabled: disabled,
     childBsPrefix: bsPrefix
   }, title), /*#__PURE__*/_react.default.createElement(_DropdownMenu.default, {
+    align: menuAlign,
     role: menuRole,
     renderOnMount: renderMenuOnMount,
     rootCloseEvent: rootCloseEvent
@@ -60011,7 +60199,7 @@ var FormCheck = _react.default.forwardRef(function (_ref, ref) {
       custom: custom
     };
   }, [controlId, custom, id]);
-  var hasLabel = label != null && label !== false && !children;
+  var hasLabel = custom || label != null && label !== false && !children;
 
   var input = /*#__PURE__*/_react.default.createElement(_FormCheckInput.default, (0, _extends2.default)({}, props, {
     type: type === 'switch' ? 'checkbox' : type,
@@ -60462,7 +60650,7 @@ var FormLabel = _react.default.forwardRef(function (_ref, ref) {
 
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'form-label');
   var columnClass = 'col-form-label';
-  if (typeof column === 'string') columnClass = columnClass + "-" + column;
+  if (typeof column === 'string') columnClass = columnClass + " " + columnClass + "-" + column;
   var classes = (0, _classnames.default)(className, bsPrefix, srOnly && 'sr-only', column && columnClass);
   "development" !== "production" ? (0, _warning.default)(controlId == null || !htmlFor, '`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.') : void 0;
   htmlFor = htmlFor || controlId;
@@ -61233,7 +61421,8 @@ var ListGroupItem = _react.default.forwardRef(function (_ref, ref) {
   return /*#__PURE__*/_react.default.createElement(_AbstractNavItem.default, (0, _extends2.default)({
     ref: ref
   }, props, {
-    eventKey: (0, _SelectableContext.makeEventKey)(eventKey || null, props.href) // eslint-disable-next-line no-nested-ternary
+    // TODO: Restrict eventKey to string in v5?
+    eventKey: (0, _SelectableContext.makeEventKey)(eventKey, props.href) // eslint-disable-next-line no-nested-ternary
     ,
     as: as || (action ? props.href ? 'a' : 'button' : 'div'),
     onClick: handleClick,
@@ -62412,18 +62601,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ModalDialog = _react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
+      contentClassName = _ref.contentClassName,
       centered = _ref.centered,
       size = _ref.size,
       children = _ref.children,
       scrollable = _ref.scrollable,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "centered", "size", "children", "scrollable"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "contentClassName", "centered", "size", "children", "scrollable"]);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'modal');
   var dialogClass = bsPrefix + "-dialog";
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     ref: ref,
     className: (0, _classnames.default)(dialogClass, className, size && bsPrefix + "-" + size, centered && dialogClass + "-centered", scrollable && dialogClass + "-scrollable")
   }), /*#__PURE__*/_react.default.createElement("div", {
-    className: bsPrefix + "-content"
+    className: (0, _classnames.default)(bsPrefix + "-content", contentClassName)
   }, children));
 });
 
@@ -62619,6 +62809,7 @@ var Modal = _react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       style = _ref.style,
       dialogClassName = _ref.dialogClassName,
+      contentClassName = _ref.contentClassName,
       children = _ref.children,
       Dialog = _ref.dialogAs,
       ariaLabelledby = _ref['aria-labelledby'],
@@ -62642,7 +62833,7 @@ var Modal = _react.default.forwardRef(function (_ref, ref) {
       onExited = _ref.onExited,
       backdropClassName = _ref.backdropClassName,
       propsManager = _ref.manager,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "style", "dialogClassName", "children", "dialogAs", "aria-labelledby", "show", "animation", "backdrop", "keyboard", "onEscapeKeyDown", "onShow", "onHide", "container", "autoFocus", "enforceFocus", "restoreFocus", "restoreFocusOptions", "onEntered", "onExit", "onExiting", "onEnter", "onEntering", "onExited", "backdropClassName", "manager"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "style", "dialogClassName", "contentClassName", "children", "dialogAs", "aria-labelledby", "show", "animation", "backdrop", "keyboard", "onEscapeKeyDown", "onShow", "onHide", "container", "autoFocus", "enforceFocus", "restoreFocus", "restoreFocusOptions", "onEntered", "onExit", "onExiting", "onEnter", "onEntering", "onExited", "backdropClassName", "manager"]);
 
   var _useState = (0, _react.useState)({}),
       modalStyle = _useState[0],
@@ -62830,7 +63021,8 @@ var Modal = _react.default.forwardRef(function (_ref, ref) {
     }), /*#__PURE__*/_react.default.createElement(Dialog, (0, _extends2.default)({}, props, {
       role: "document",
       onMouseDown: handleDialogMouseDown,
-      className: dialogClassName
+      className: dialogClassName,
+      contentClassName: contentClassName
     }), children));
   };
 
@@ -64607,6 +64799,8 @@ var _ButtonGroup = _interopRequireDefault(require("./ButtonGroup"));
 
 var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 
+var _DropdownMenu = require("./DropdownMenu");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var propTypes = {
@@ -64640,6 +64834,15 @@ var propTypes = {
   /** Disables both Buttons  */
   disabled: _propTypes.default.bool,
 
+  /**
+   * Aligns the dropdown menu responsively.
+   *
+   * _see [DropdownMenu](#dropdown-menu-props) for more details_
+   *
+   * @type {"left"|"right"|{ sm: "left"|"right" }|{ md: "left"|"right" }|{ lg: "left"|"right" }|{ xl: "left"|"right"} }
+   */
+  menuAlign: _DropdownMenu.alignPropType,
+
   /** An ARIA accessible role applied to the Menu component. When set to 'menu', The dropdown */
   menuRole: _propTypes.default.string,
 
@@ -64649,7 +64852,7 @@ var propTypes = {
   /**
    *  Which event when fired outside the component will cause it to be closed.
    *
-   * _see [DropdownMenu](#menu-props) for more details_
+   * _see [DropdownMenu](#dropdown-menu-props) for more details_
    */
   rootCloseEvent: _propTypes.default.string,
 
@@ -64679,10 +64882,11 @@ var SplitButton = _react.default.forwardRef(function (_ref, ref) {
       onClick = _ref.onClick,
       href = _ref.href,
       target = _ref.target,
+      menuAlign = _ref.menuAlign,
       menuRole = _ref.menuRole,
       renderMenuOnMount = _ref.renderMenuOnMount,
       rootCloseEvent = _ref.rootCloseEvent,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "size", "variant", "title", "type", "toggleLabel", "children", "onClick", "href", "target", "menuRole", "renderMenuOnMount", "rootCloseEvent"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "size", "variant", "title", "type", "toggleLabel", "children", "onClick", "href", "target", "menuAlign", "menuRole", "renderMenuOnMount", "rootCloseEvent"]);
   return /*#__PURE__*/_react.default.createElement(_Dropdown.default, (0, _extends2.default)({
     ref: ref
   }, props, {
@@ -64706,6 +64910,7 @@ var SplitButton = _react.default.forwardRef(function (_ref, ref) {
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "sr-only"
   }, toggleLabel)), /*#__PURE__*/_react.default.createElement(_Dropdown.default.Menu, {
+    align: menuAlign,
     role: menuRole,
     renderOnMount: renderMenuOnMount,
     rootCloseEvent: rootCloseEvent
@@ -64717,7 +64922,7 @@ SplitButton.defaultProps = defaultProps;
 SplitButton.displayName = 'SplitButton';
 var _default = SplitButton;
 exports.default = _default;
-},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","./Button":"../node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"../node_modules/react-bootstrap/esm/ButtonGroup.js","./Dropdown":"../node_modules/react-bootstrap/esm/Dropdown.js"}],"../node_modules/react-bootstrap/esm/TabContainer.js":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js","./Button":"../node_modules/react-bootstrap/esm/Button.js","./ButtonGroup":"../node_modules/react-bootstrap/esm/ButtonGroup.js","./Dropdown":"../node_modules/react-bootstrap/esm/Dropdown.js","./DropdownMenu":"../node_modules/react-bootstrap/esm/DropdownMenu.js"}],"../node_modules/react-bootstrap/esm/TabContainer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -65430,7 +65635,8 @@ var _ToggleButton = _interopRequireDefault(require("./ToggleButton"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultProps = {
-  type: 'radio'
+  type: 'radio',
+  vertical: false
 };
 
 var ToggleButtonGroup = _react.default.forwardRef(function (props, ref) {
@@ -66253,6 +66459,11 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"global.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/blockshopUtils.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -66336,7 +66547,7 @@ class Inventory extends _react.Component {
       style: {
         width: '18rem'
       }
-    }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Header, null, "User's Inventory"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup, null, this.state.invName.map((x, index) => /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, {
+    }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Header, null, "My Inventory!"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup, null, this.state.invName.map((x, index) => /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, {
       key: x
     }, x, " x ", this.state.invQty[index])))));
   }
@@ -66370,6 +66581,9 @@ const Item = props => {
     variant: "top",
     src: props.picture
   }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Body, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Title, null, props.name), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Text, null, props.description), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Title, null, props.price), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
+    style: {
+      backgroundImage: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)"
+    },
     onClick: addItem,
     variant: "primary"
   }, "Add to Cart"))));
@@ -66377,12 +66591,12 @@ const Item = props => {
 
 var _default = Item;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js"}],"assets/blueRing.png":[function(require,module,exports) {
-module.exports = "/blueRing.9cca480f.png";
-},{}],"assets/butterfly.png":[function(require,module,exports) {
-module.exports = "/butterfly.85e4bb7d.png";
-},{}],"assets/fireWing.png":[function(require,module,exports) {
-module.exports = "/fireWing.79774d96.png";
+},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js"}],"assets/defiKing.gif":[function(require,module,exports) {
+module.exports = "/defiKing.cfe5148a.gif";
+},{}],"assets/unicorn.gif":[function(require,module,exports) {
+module.exports = "/unicorn.9bd2792b.gif";
+},{}],"assets/pixelCorn.gif":[function(require,module,exports) {
+module.exports = "/pixelCorn.a961497a.gif";
 },{}],"Containers/Options.js":[function(require,module,exports) {
 "use strict";
 
@@ -66399,11 +66613,11 @@ require("../css/blockshopUtils.css");
 
 var _Item = _interopRequireDefault(require("./Options/Item"));
 
-var _blueRing = _interopRequireDefault(require("../assets/blueRing.png"));
+var _defiKing = _interopRequireDefault(require("../assets/defiKing.gif"));
 
-var _butterfly = _interopRequireDefault(require("../assets/butterfly.png"));
+var _unicorn = _interopRequireDefault(require("../assets/unicorn.gif"));
 
-var _fireWing = _interopRequireDefault(require("../assets/fireWing.png"));
+var _pixelCorn = _interopRequireDefault(require("../assets/pixelCorn.gif"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66418,20 +66632,20 @@ class Options extends _react.Component {
     super(...args);
 
     _defineProperty(this, "listItems", [{
-      name: 'Butterfly',
+      name: 'Rainbow Unicorn',
       price: 30,
-      description: 'This Butterfly has Magical Propeties... What those are? Who knows.. Buy it.',
-      picture: _butterfly.default
+      description: '',
+      picture: _unicorn.default
     }, {
-      name: 'Blue Ring',
+      name: 'Defi Unicorn',
       price: 50,
-      description: 'May this random ring grant you protection somehow...',
-      picture: _blueRing.default
+      description: '',
+      picture: _defiKing.default
     }, {
-      name: 'Fire Wing',
+      name: 'Pixelated Unicorn',
       price: 80,
-      description: 'I Think this used to Belong to Icarus... oops..',
-      picture: _fireWing.default
+      description: '',
+      picture: _pixelCorn.default
     }]);
   }
 
@@ -66455,7 +66669,7 @@ class Options extends _react.Component {
 
 var _default = Options;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","../css/blockshopUtils.css":"css/blockshopUtils.css","./Options/Item":"Containers/Options/Item.js","../assets/blueRing.png":"assets/blueRing.png","../assets/butterfly.png":"assets/butterfly.png","../assets/fireWing.png":"assets/fireWing.png"}],"Containers/Cart.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","../css/blockshopUtils.css":"css/blockshopUtils.css","./Options/Item":"Containers/Options/Item.js","../assets/defiKing.gif":"assets/defiKing.gif","../assets/unicorn.gif":"assets/unicorn.gif","../assets/pixelCorn.gif":"assets/pixelCorn.gif"}],"Containers/Cart.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -66488,7 +66702,7 @@ class Cart extends _react.Component {
       });
 
       if (balance > total) {
-        window.account.sendMoney('blockshop.testnet', this.props.total * 10000).then(() => {
+        window.account.sendMoney('farm.testnet', this.props.total * 10000).then(() => {
           window.contract.deliverProducts({
             checkout: CheckoutList
           });
@@ -66513,13 +66727,19 @@ class Cart extends _react.Component {
       return /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, {
         key: x
       }, `${x}:${this.props.qtys[this.props.names.indexOf(x)]}`);
-    }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Header, null, /*#__PURE__*/_react.default.createElement("b", null, "Total: ", this.props.total), " ")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Header, null, /*#__PURE__*/_react.default.createElement("b", null, "Total: ", this.props.total), " ")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card.Header, null, "Refresh the page after clicking submit! ")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.ListGroup.Item, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
       className: "d-flex justify-content-center"
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
+      style: {
+        backgroundImage: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)"
+      },
       onClick: this.props.clearCart
     }, "Clear Cart")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
       className: "d-flex justify-content-center"
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Button, {
+      style: {
+        backgroundImage: "linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%)"
+      },
       onClick: this.startTransaction
     }, "Submit")))))));
   }
@@ -66547,6 +66767,8 @@ var _config = _interopRequireDefault(require("./config"));
 var _reactBootstrap = require("react-bootstrap");
 
 require("./scss/AppStyle.scss");
+
+require("./global.css");
 
 var _Inventory = _interopRequireDefault(require("./Containers/Inventory"));
 
@@ -66593,24 +66815,28 @@ function App() {
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "App"
+    className: "App bodyBackground"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
     expand: "lg",
     bg: "dark",
-    variant: "dark"
+    variant: "dark",
+    bg: "transparent"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, {
     href: "#home"
-  }, "BlockShop"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "GIF Shop")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
     "aria-controls": "responsive-navbar-nav"
   }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "responsive-navbar-nav"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "mr-auto"
-  }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
+  }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, null, /*#__PURE__*/_react.default.createElement("h3", null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
+    style: {
+      color: "white"
+    },
     onClick: window.accountId !== '' ? _utils.logout : _utils.login,
     href: "#memes"
-  }, window.accountId !== '' ? window.accountId : 'Please Login')))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, null, /*#__PURE__*/_react.default.createElement(_Options.default, {
+  }, window.accountId !== '' ? window.accountId : 'Please Login'))))), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, null, /*#__PURE__*/_react.default.createElement(_Options.default, {
     addItem: addItem
   })), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "rowSpacing d-flex justify-content-center"
@@ -66623,7 +66849,7 @@ function App() {
     total: cartPrice
   }))))));
 }
-},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","react":"../node_modules/react/index.js","./utils":"utils.js","./config":"config.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./scss/AppStyle.scss":"scss/AppStyle.scss","./Containers/Inventory":"Containers/Inventory.js","./Containers/Options":"Containers/Options.js","./Containers/Cart":"Containers/Cart.js"}],"index.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","react":"../node_modules/react/index.js","./utils":"utils.js","./config":"config.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./scss/AppStyle.scss":"scss/AppStyle.scss","./global.css":"global.css","./Containers/Inventory":"Containers/Inventory.js","./Containers/Options":"Containers/Options.js","./Containers/Cart":"Containers/Cart.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -66667,7 +66893,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61921" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53959" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

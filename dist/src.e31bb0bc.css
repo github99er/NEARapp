@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --blue: #00fbff;
+  --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -213,6 +213,7 @@ caption {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -3443,6 +3444,7 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
+  color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -4787,6 +4789,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
   padding: 0.75rem 1.25rem;
   color: inherit;
 }
@@ -9784,7 +9787,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 
 .text-reset {
@@ -9893,13 +9896,27 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.App{
+  background:url(https://media3.giphy.com/media/U3qYN8S0j3bpK/giphy.webp?cid=ecf05e47dcad5c856ae744a8bb3d948ab94a2c79556e7ffa&rid=giphy.webp);
+  background-size: cover;
+  color: black;
+}
+
+.pad{
+  margin:10px;
+ 
+}
+
+.containerStyle{
+  margin-top: 10px;
+}
 .rowSpacing {
   margin-bottom: 10%;
   text-align: center;
 }
 
 .InventoryContainer {
-  background-color: #424242;
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
   margin-top: 10%;
   border-radius: 10px;
   padding: 3%;
@@ -9913,7 +9930,7 @@ h3 {
 }
 
 .OptionsContainer {
-  background-color: #424242;
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
   margin-top: 10%;
   border-radius: 10px;
   padding: 3%;

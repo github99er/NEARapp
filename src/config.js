@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'blockshop'
+const CONTRACT_NAME = process.env.CONTRACT_NAME ||'near-blank-project.farm.testnet'
 
 function getConfig(env) {
   switch (env) {
